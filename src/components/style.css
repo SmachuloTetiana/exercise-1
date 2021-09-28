@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.time {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 84px;
+    color: #37474f;
+}
