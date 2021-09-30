@@ -1,5 +1,5 @@
 import React from "react";
-import TimeComponent from "components/TimeComponent";
+import TimeComponent from "components/Time";
 
 const App: React.FC = () => <TimeComponent />;
 
