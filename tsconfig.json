@@ -27,6 +27,6 @@
     "include": [
         "./src",
         "./webpack.config.ts",
-        "test/setupTests.ts" 
+        "test/setupTests.ts"
     ]
 }

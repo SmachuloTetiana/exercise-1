@@ -12,7 +12,8 @@
   },
   "jest": {
     "transform": {
-      "^.+\\.tsx?$": "ts-jest"
+      "^.+\\.tsx?$": "ts-jest",
+      ".+\\.(css|styl|less|sass|scss)$": "jest-transform-css"
     },
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
     "moduleFileExtensions": [
@@ -25,7 +26,11 @@
     ],
     "setupFiles": [
       "<rootDir>/test/setupTests.ts"
-    ]
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/assetsTransformer.js",
+      "\\.(css|less)$": "<rootDir>/assetsTransformer.js"
+    }
   },
   "babel": {
     "presets": [
@@ -61,6 +66,7 @@
     "fork-ts-checker-webpack-plugin": "^6.3.3",
     "html-webpack-plugin": "^5.3.2",
     "jest": "^27.2.4",
+    "path-posix": "^1.0.0",
     "prettier": "^2.4.1",
     "style-loader": "^3.3.0",
     "ts-jest": "^27.0.5",
@@ -74,6 +80,7 @@
   },
   "dependencies": {
     "css-loader": "^6.3.0",
+    "jest-transform-css": "^2.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-test-renderer": "^17.0.2"
